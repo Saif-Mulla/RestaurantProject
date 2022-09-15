@@ -1,0 +1,196 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.navbar a {
+  float: right;
+  padding: 12px;
+  top: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {0
+  background-color: #F29B10;
+}
+
+.active {
+  background-color: #F29B10;
+}
+
+
+
+.sidenav 
+{
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+  background-color: #F29B10;
+  overflow-x: hidden;
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#icon{
+  cursor: pointer;
+}
+
+.wrapper{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  
+  background: #C4C4C4;
+  /* border-radius: 5px; */
+  box-shadow: 0px 15px 20px #07083C(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 70px;
+  color: #C4C4C4;
+  user-select: none;
+  /* border-radius: 15px 15px 0 0; */
+}
+.wrapper form{
+  padding: 10px 30px 30px 30px;
+}
+.wrapper form .field{
+  height: 45px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  /* border-radius: 10px; */
+  transition: all 0.3s ease;
+}
+
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color:  #41afd0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #07083C;
+  background-color:#FFB800;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #41afd0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+.sidenav a 
+{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  float: center;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transform: translateX(+140%)
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  background-color: #B9B3A8
+  padding: 0px 10px;
+}
+
+@media screen {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+

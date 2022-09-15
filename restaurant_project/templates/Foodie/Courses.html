@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body {
+  font-family: "Lato", sans-serif;
+} 
+
+div {
+display:inline-block; 
+}
+.row-2.cl-1{
+ transform : translate(4%, 26%);
+}
+
+.iframe1 {
+ transform : translate(6%, 6%);
+}
+
+.iframe1 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.row-2.cl-2{
+  transform : translate(-5%, 18%);
+}
+
+.iframe2 {
+ transform : translate(7%, 7%);
+}
+
+.iframe2 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.row-2.cl-3{
+  transform : translate(-8%, 17%);
+}
+
+.iframe3 {
+ transform : translate(8%, 8%);
+}
+
+.iframe3 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.navbar a {
+  float: right;
+  padding: 12px;
+  top: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {0
+  background-color: #F29B10;
+}
+
+.active {
+  background-color: #F29B10;
+}
+
+
+
+
+
+
+.sidenav 
+{
+/* padding: 5px 5px 5px 5px */
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background-color: #F29B10;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+.sidenav a 
+{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+	display :inline-block;
+  margin-left: 100px; /* Same as the width of the sidenav */
+  /* Increased text to enable scrolling */
+  background-color: #C4C4C4;/* #B9B3A8 */
+  padding: 0px 10px;
+  block-size: 406px;
+    width: 340px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="row-1"> 
+<div class="cl-1"> 
+<div class="sidenav" style="display: grid ; justify-content: space-between; text-align: center;">
+  <a href="{% url 'signup' %}"> <img src="{% static 'images/i1.png' %}" id="icon" height="50" width="50" class="center"/> </a>
+  <a href="{% url 'training' %}"> <img src="{% static 'images/i2.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i3.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i4.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'reports' %}"> <img src="{% static 'images/i5.png' %}" id="icon" height="50" width="50" class="center"/></a>  
+  <a href="#"> <img src="{% static 'images/i6.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'rewards' %}"> <img src="{% static 'images/i7.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  </br>
+  
+</div>
+ 
+</div>
+
+
+<!-- <div class="cl-6">
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a class="active" href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a class="active" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a class="active" href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+</div> -->
+</div>
+
+<div class="row-2 cl-1">
+
+<div class="main">
+<!--  <div class="col-4 fade-in">
+<div class="feature-img">
+<img src="img/img2.jpg" alt="" class="img-size">
+<img src="img/play_button.png" alt="" class="play-btn3" onclick="playVideo('media/video1.mp4')"> -->
+<!-- <button class="but1" onclick="playVideo('media/video1.mp4')"></button> -->
+<div class=iframe1>
+<iframe width="300" height="280" src="https://www.youtube.com/embed/4AZzAvy4Kck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>RESTAURANT CUSTOMER SERVICE: GREETING TIPS</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row-2 cl-2">
+
+<div class="main">
+
+<div class=iframe2>
+<iframe width="300" height="280" src="https://www.youtube.com/embed/p9mzBckf3G4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Learn How to Set a Formal Dinner Table</p>
+</div>
+</div>
+</div>
+
+<div class="row-2 cl-3">
+
+<div class="main">
+
+<div class=iframe3>
+<iframe width="300" height="280" src="https://www.youtube.com/embed/W6kbZHbEJrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>How to be a good restaurant manager</p>
+</div>
+</div>
+</div>
+</body>
+</html> 
+</body>
+</html>

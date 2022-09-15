@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'css/mycss.css' %}" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+
+
+<div class="sidenav" style="display: grid ; justify-content: space-between; text-align: center;">
+  <a href="{% url 'signup' %}"> <img src="{% static 'images/i1.png' %}" id="icon" height="50" width="50" class="center"/> </a>
+  <a href="{% url 'training' %}"> <img src="{% static 'images/i2.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i3.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i4.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'reports' %}"> <img src="{% static 'images/i5.png' %}" id="icon" height="50" width="50" class="center"/></a>  
+  <a href="#"> <img src="{% static 'images/i6.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'rewards' %}"> <img src="{% static 'images/i7.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  </br>
+  
+</div>
+
+
+
+<div class="wrapper">
+  <div class="title">
+    <img src="{% static 'images/user.png' %}" height="100" width="100" class="center"/>
+    <input type="file" name="profile" style="margin-left: 20px;" placeholder="Profile Photo">
+  </div>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <p style=" color: red; text-align:center" >{{error}}</p>
+    <div class="field">
+      
+      <input type="text" name="ID" placeholder= "ID" size="15" value="{{ user }}" required /></br>
+    </div>
+    <div class="field">
+      
+      <input type="text" name="name" placeholder="Full Name" size="15" value="{{ user_profile.name }}" required /></br>
+    </div>
+
+    <div class="field">
+      
+      <input type="email"  name="email" placeholder="Email-ID" size="15" value="{{ user }}"  required /></br>
+    </div>
+
+    <div class="field">
+      
+    <select value="{{ user_profile.role }}">  
+      <option value="Role">Role</option>  
+      <option value="GA">General Manager</option>  
+      <option value="Ma">Manager</option>  
+      <option value="Chef" selected>Chef</option>  
+      <option value="FM">Food Manager</option>  
+      <option value="KM">Kitchen manager</option>  
+      <option value="CH">Cashier</option>  
+      <option value="HH">Host/Hostess</option>  
+      <option value="se">Server</option>  
+      <option value="ru">Runner</option>  
+    </select>
+    </div>
+
+    <div class="field">
+      
+      <input type="text" name="phone" placeholder="Phone" value="{{ user_profile.phone_number }}" size="15" required /></br>
+    </div>
+
+    <div class="field">
+      
+      <input type="text" name="address" placeholder="Address" value="{{ user_profile.address }}" size="15" required /></br>
+    </div>
+
+
+    <div class="field">
+      <input type="submit" value="Edit Profile">
+    </div>
+    
+  </form>
+</div>
+
+
+   
+</body>
+</html> 

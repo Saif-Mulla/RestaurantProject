@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+div {
+	display: inline-block;
+}
+h1 {
+	transform: translate(34%, -22%);
+    font-size: 48px;
+    background-color: dimgrey;
+    block-size: 63px;
+    width: 195px;
+}
+.row-2.cl-1{
+ transform : translate(6%, 19%);
+}
+
+.iframe1 {
+ transform : translate(6%, 6%);
+}
+
+.iframe1 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.row-2.cl-2{
+  transform : translate(0%, -52%);
+}
+
+.iframe2 {
+ transform : translate(7%, 7%);
+}
+
+.iframe2 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.row-2.cl-3{
+  transform : translate(65%, -174%);
+}
+
+.iframe3 {
+ transform : translate(8%, 8%);
+}
+
+.iframe3 p {
+	width : 300px;
+	 transform : translate(0%, -33%);
+	 font-size: 28px; 
+} 
+
+.navbar a {
+  float: right;
+  padding: 12px;
+  top: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {0
+  background-color: #F29B10;
+}
+
+.active {
+  background-color: #F29B10;
+}
+
+table {
+	transform : translate(0%, 104%);
+}
+
+
+.sidenav 
+{
+/* padding: 5px 5px 5px 5px */
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+   top: 20px; 
+  left: 10px;
+  background-color: #F29B10;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+.sidenav a 
+{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+	display :inline-block;
+  margin-left: 100px; /* Same as the width of the sidenav */
+  /* Increased text to enable scrolling */
+  background-color: #C4C4C4;/* #B9B3A8 */
+  padding: 0px 10px;
+  block-size: 406px;
+    width: 595px;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 35px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: var(--darkGreen);
+    color: #ffffff;
+    /* text-align: left; */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--darkGreen);
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="sidenav" style="display: grid ; justify-content: space-between; text-align: center;">
+  <a href="{% url 'signup' %}"> <img src="{% static 'images/i1.png' %}" id="icon" height="50" width="50" class="center"/> </a>
+  <a href="{% url 'training' %}"> <img src="{% static 'images/i2.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i3.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="#"> <img src="{% static 'images/i4.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'reports' %}"> <img src="{% static 'images/i5.png' %}" id="icon" height="50" width="50" class="center"/></a>  
+  <a href="#"> <img src="{% static 'images/i6.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  <a href="{% url 'rewards' %}"> <img src="{% static 'images/i7.png' %}" id="icon" height="50" width="50" class="center"/></a>
+  </br>
+  
+</div>
+
+<div class="row-2 cl-1">
+<!-- <h1>Reports</h1> -->
+<!-- <div class="main"> -->
+<div id="piechart" style="width: 700px; height: 400px;"></div>
+<!-- <div class=iframe1> -->
+<!-- 
+</div> -->
+</div>
+<!-- </div> -->
+
+
+
+
+<div class="row-2 cl-2">
+
+<div class="">
+
+<table class="styled-table" border="2", style="width:100%" style="box-sizing: content-box;">
+  <tr>
+    <th style="width:25%">Sr.No</th>
+    <th style="width:25%">Month</th>
+    <th style="width:25%">Total Course</th>
+    <th style="width:25%">Rewards</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Jan</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+     <td>2</td>
+    <td>Feb</td>
+    <td>5</td>
+    <td>7</td>
+    
+  </tr>
+  <tr>
+     <td>3</td>
+    <td>March</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+</table>
+<div class=iframe2>
+
+</div>
+</div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="{% static 'js/re.js'  %}"></script>
+</html> 
